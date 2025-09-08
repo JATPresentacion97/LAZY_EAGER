@@ -18,7 +18,7 @@ This project demonstrates the difference between **EAGER** and **LAZY** fetching
 
 ## How to Run
 ```bash
-./gradlew bootRun
+./gradle bootRun
 ```
 
 The app will start on **http://localhost:8080**.
@@ -38,7 +38,7 @@ Use the following:
 ## Tests
 Run the tests with:
 ```bash
-./gradlew test
+./gradle test
 ```
 
 The `SmokeTest` ensures the Spring context loads properly.  
