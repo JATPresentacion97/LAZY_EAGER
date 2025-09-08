@@ -7,17 +7,12 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-    open-in-view: false
-    properties:
-      hibernate:
-        format_sql: true
     show-sql: true
+  sql:
+    init:
+      mode: always
+      defer-datasource-initialization: true   # 👈 fixes timing issue
   h2:
     console:
       enabled: true
       path: /h2
-
-logging:
-  level:
-    org.hibernate.SQL: DEBUG
-    org.hibernate.orm.jdbc.bind: TRACE
