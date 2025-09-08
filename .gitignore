@@ -1,0 +1,59 @@
+# ----------------------------------------
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+logs/
+*.out
+
+# Spring Boot
+*.iml
+*.ipr
+*.iws
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle Wrapper properties
+gradle-wrapper.properties
+
+# IDEs
+.idea/
+.vscode/
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+jacoco.exec
+
+# Environment
+.env
+.env.*
+*.key
+*.pem
+*.crt
+
+# H2 database files (if persisted locally)
+*.mv.db
+*.h2.db
+
+# Backup files
+*.bak
+*.tmp
+*~
+
+# Package management
+node_modules/
