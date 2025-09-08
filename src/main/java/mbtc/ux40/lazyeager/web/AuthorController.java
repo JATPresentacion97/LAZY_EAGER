@@ -18,16 +18,34 @@ public class AuthorController {
 
     @GetMapping("/lazy")
     public Object lazy() {
-        return authors.findAll().stream().map(Mapping::toDto).collect(Collectors.toList());
+        long start = System.currentTimeMillis();
+        var result = authors.findAll().stream()
+                .map(Mapping::toDto)
+                .toList();
+        long end = System.currentTimeMillis();
+        System.out.println("🔥 Lazy took: " + (end - start) + " ms");
+        return result;
     }
 
     @GetMapping("/lazy-no-nplus")
     public Object lazyNoNPlus() {
-        return authors.findAllWithBooksFetched().stream().map(Mapping::toDto).collect(Collectors.toList());
+        long start = System.currentTimeMillis();
+        var result = authors.findAllWithBooksFetched().stream()
+                .map(Mapping::toDto)
+                .toList();
+        long end = System.currentTimeMillis();
+        System.out.println("🚀 Lazy (no N+1) took: " + (end - start) + " ms");
+        return result;
     }
 
     @GetMapping("/eager")
-    public Object eagerViaEntityGraph() {
-        return authors.findByNameContainingIgnoreCase("").stream().map(Mapping::toDto).collect(Collectors.toList());
+    public Object eager() {
+        long start = System.currentTimeMillis();
+        var result = authors.findAll().stream()
+                .map(Mapping::toDto)
+                .toList();
+        long end = System.currentTimeMillis();
+        System.out.println("⚡ Eager took: " + (end - start) + " ms");
+        return result;
     }
 }

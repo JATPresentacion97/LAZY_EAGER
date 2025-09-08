@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "Spring Boot Eager vs Lazy Demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Lazy (N+1 problem)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors/lazy",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "lazy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Lazy (No N+1)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors/lazy-no-nplus",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "lazy-no-nplus"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Eager",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors/eager",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "eager"
+          ]
+        }
+      }
+    },
+    {
+      "name": "H2 Console",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/h2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "h2"
+          ]
+        }
+      }
+    }
+  ]
+}
